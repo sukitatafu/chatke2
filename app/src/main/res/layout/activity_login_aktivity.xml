@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.splash.billy.chatke2.LoginAktivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Username"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etuser"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Password"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etpass"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/blogin"
+        android:layout_width="match_parent"
+        android:text="login"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
