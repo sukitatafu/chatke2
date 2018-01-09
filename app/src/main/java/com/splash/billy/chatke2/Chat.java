@@ -12,6 +12,9 @@ public class Chat {
     private String pesan;
     private Long tanggal;
 
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference chatRef = database.getReference("chats");
+
     public User getSender() {
         return sender;
     }
@@ -31,12 +34,6 @@ public class Chat {
     public void setTanggal(Long tanggal) {
         this.tanggal = tanggal;
     }
-
-    private Long tanggal;
-
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference chatRef = database.getReference("chats");
-
 
     public void send(){
         chatRef.push().setValue(this);

@@ -67,7 +67,7 @@ public class UserListActivity extends AppCompatActivity {
         rvUser = (RecyclerView) findViewById(R.id.rvUser);
         rvUser.setHasFixedSize(true);
         rvUser.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new UserListActivity(this,users);
+        adapter = new UserListAdapter(this,users);
         rvUser.setAdapter(adapter);
     }
 }

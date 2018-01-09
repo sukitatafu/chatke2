@@ -14,6 +14,9 @@ public class User implements Parcelable {
 
         private String nama;
         private String email;
+        private String telepon;
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference userRef = database.getReference("users");
 
     public String getNama() {
         return nama;
@@ -38,13 +41,6 @@ public class User implements Parcelable {
     public void setTelepon(String telepon) {
         this.telepon = telepon;
     }
-
-    private String telepon;
-
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference userRef = database.getReference("users");
-
-
 
         public void register(){
             userRef.child( this.telepon ).setValue(this);
@@ -82,5 +78,8 @@ public class User implements Parcelable {
             return new User[size];
         }
     };
+
+    public void seEmail(String email) {
+    }
 }
 
